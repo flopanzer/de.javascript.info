@@ -62,15 +62,15 @@ Eine Liste der Breakpoints finden wir immer im rechten Panel. Das ist zum Beispi
 - Den Haltepunkt zu entfernen, indem wir rechtsklicken und Entfernen wählen.
 - ...und so weiter.
 
-````smart header="Conditional breakpoints"
-*Rechtsklick* auf die Zeilennummer erlaubt es, einen *bedingten*('conditional') Haltepunkt zu erzeugen. Er wird nur ausgelöst, wenn der angegebene Ausdruck wahr ist.
+```smart header="Conditional breakpoints"
+*Right click* on the line number allows to create a *conditional* breakpoint. It only triggers when the given expression is truthy.
 
-Das ist praktisch, wenn wir nur für einen bestimmten Variablenwert oder für bestimmte Funktionsparameter die Ausführung unterbrechen wollen.
+That's handy when we need to stop only for a certain variable value or for certain function parameters.
 ```
 
 ## Debugger command
 
-Wir können den Code auch pausieren, indem wir den `debugger`-Befehl darin verwenden, etwa so:
+We can also pause the code by using the `debugger` command in it, like this:
 
 ```js
 function hello(name) {
