@@ -34,11 +34,11 @@ Nun kannst Du die gleiche Umschaltfläche <span class="devtools" style="backgrou
 
 ## Die Konsole
 
-If we press `key:Esc`, then a console opens below. We can type commands there and press `key:Enter` to execute.
+Wenn wir `key:Esc` drücken, dann öffnet sich unten eine Konsole. Dort können wir Befehle eingeben und mit `key:Enter` ausführen.
 
-After a statement is executed, its result is shown below.
+Nachdem eine Anweisung ausgeführt wurde, wird ihr Ergebnis unten angezeigt.
 
-For example, here `1+2` results in `3`, and `hello("debugger")` returns nothing, so the result is `undefined`:
+Zum Beispiel ergibt hier `1+2` `3`, und `hallo("Debugger")` gibt nichts zurück, so dass das Ergebnis `undefined` ist:
 
 ![](chrome-sources-console.svg)
 
