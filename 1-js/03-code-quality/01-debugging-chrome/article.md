@@ -28,7 +28,7 @@ Das Source Panel besteht aus drei Teilen:
 
 1. Der Bereich **Datei-Navigator** listet HTML-, JavaScript-, CSS- und andere Dateien auf, einschließlich der Bilder, die an die Seite angehängt sind. Hier können auch Chrome-Erweiterungen erscheinen.
 2. Der Bereich **Code Editor** zeigt den Quellcode an.
-3. Der Bereich **JavaScript Debugging** dient zum Debuggen, den werden wir bald erforschen.
+3. Der Bereich **JavaScript Debugging** dient zum Debuggen. Den werden wir uns bald näher anschauen.
 
 Nun kannst Du die gleiche Umschaltfläche <span class="devtools" style="background-position:-172px -122px"></span> erneut anklicken, um die Ressourcenliste auszublenden und dem Code etwas mehr Platz zu geben.
 
@@ -38,39 +38,39 @@ Wenn wir `key:Esc` drücken, dann öffnet sich unten eine Konsole. Dort können 
 
 Nachdem eine Anweisung ausgeführt wurde, wird ihr Ergebnis unten angezeigt.
 
-Zum Beispiel ergibt hier `1+2` `3`, und `hallo("Debugger")` gibt nichts zurück, so dass das Ergebnis `undefined` ist:
+Zum Beispiel ergibt hier `1+2` `3`, und `hello("Debugger")` gibt nichts zurück, so dass das Ergebnis `undefined` ist:
 
 ![](chrome-sources-console.svg)
 
 ## Breakpoints
 
-Let's examine what's going on within the code of the [example page](debugging/index.html). In `hello.js`, click at line number `4`. Yes, right on the `4` digit, not on the code.
+Untersuchen wir zunächst, was im Code der [Beispielseite](debugging/index.html) vor sich geht. Klicke in `hello.js` auf die Zeilennummer `4`. Ja, direkt auf die Ziffer `4`, nicht auf den Code.
 
-Congratulations! You've set a breakpoint. Please also click on the number for line `8`.
+Herzlichen Glückwunsch! Wir haben einen Haltepunkt gesetzt. Bitte klick danach auch auf die Nummer für die Zeile `8`.
 
-It should look like this (blue is where you should click):
+Es sollte so aussehen (blau ist die Stelle, auf die wir klicken sollten):
 
 ![](chrome-sources-breakpoint.svg)
 
-A *breakpoint* is a point of code where the debugger will automatically pause the JavaScript execution.
+Ein *Breakpoint* ist ein Codepunkt, an dem der Debugger die Ausführung des JavaScript-Codes automatisch unterbricht.
 
-While the code is paused, we can examine current variables, execute commands in the console etc. In other words, we can debug it.
+Während der Code pausiert wird, können wir aktuelle Variablen untersuchen, Befehle in der Konsole ausführen usw. Mit anderen Worten, wir können ihn debuggen.
 
-We can always find a list of breakpoints in the right panel. That's useful when we have many breakpoints in various files. It allows us to:
-- Quickly jump to the breakpoint in the code (by clicking on it in the right panel).
-- Temporarily disable the breakpoint by unchecking it.
-- Remove the breakpoint by right-clicking and selecting Remove.
-- ...And so on.
+Eine Liste der Breakpoints finden wir immer im rechten Panel. Das ist zum Beispiel nützlich, wenn wir viele Haltepunkte in verschiedenen Dateien haben. Es erlaubt uns dann:
+- Schnell zu dem Haltepunkt im Code zu springen (durch Anklicken im rechten Panel).
+- Den Haltepunkt vorübergehend zu deaktivieren, indem wir das Häkchen entfernen.
+- Den Haltepunkt zu entfernen, indem wir rechtsklicken und Entfernen wählen.
+- ...und so weiter.
 
-```smart header="Conditional breakpoints"
-*Right click* on the line number allows to create a *conditional* breakpoint. It only triggers when the given expression is truthy.
+````smart header="Conditional breakpoints"
+*Rechtsklick* auf die Zeilennummer erlaubt es, einen *bedingten*('conditional') Haltepunkt zu erzeugen. Er wird nur ausgelöst, wenn der angegebene Ausdruck wahr ist.
 
-That's handy when we need to stop only for a certain variable value or for certain function parameters.
+Das ist praktisch, wenn wir nur für einen bestimmten Variablenwert oder für bestimmte Funktionsparameter die Ausführung unterbrechen wollen.
 ```
 
 ## Debugger command
 
-We can also pause the code by using the `debugger` command in it, like this:
+Wir können den Code auch pausieren, indem wir den `debugger`-Befehl darin verwenden, etwa so:
 
 ```js
 function hello(name) {
