@@ -1,10 +1,10 @@
 # Debugging in Chrome
 
-Before writing more complex code, let's talk about debugging.
+Bevor wir komplexeren Code schreiben, lassen uns das Debuggen genau anschauen.
 
-[Debugging](https://en.wikipedia.org/wiki/Debugging) is the process of finding and fixing errors within a script. All modern browsers and most other environments support debugging tools -- a special UI in developer tools that makes debugging much easier. It also allows to trace the code step by step to see what exactly is going on.
+[Debugging] (https://en.wikipedia.org/wiki/Debugging) ist der Prozess des Findens und Behebens von Fehlern innerhalb eines Skripts. Alle modernen Browser und die meisten anderen Umgebungen unterstützen Debugging-Werkzeuge - eine spezielle UI in Entwicklertools, die das Debugging wesentlich erleichtert. Es erlaubt auch, den Code Schritt für Schritt zurückzuverfolgen, um zu sehen, was genau vor sich geht.
 
-We'll be using Chrome here, because it has enough features, most other browsers have a similar process.
+Wir werden hier Chrome verwenden, weil es genügend Funktionen hat. Die meisten anderen Browser haben eine ähnliche Herangehensweise.
 
 ## The "Sources" panel
 
