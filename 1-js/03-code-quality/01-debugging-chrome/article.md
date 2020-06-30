@@ -1,38 +1,38 @@
 # Debugging in Chrome
 
-Bevor wir komplexeren Code schreiben, lassen uns das Debuggen genau anschauen.
+Bevor wir komplexeren Code schreiben, lassen uns das Debuggen genauer anschauen.
 
-[Debugging] (https://en.wikipedia.org/wiki/Debugging) ist der Prozess des Findens und Behebens von Fehlern innerhalb eines Skripts. Alle modernen Browser und die meisten anderen Umgebungen unterstützen Debugging-Werkzeuge - eine spezielle UI in Entwicklertools, die das Debugging wesentlich erleichtert. Es erlaubt auch, den Code Schritt für Schritt zurückzuverfolgen, um zu sehen, was genau vor sich geht.
+[Debugging](https://en.wikipedia.org/wiki/Debugging) ist der Prozess des Findens und Behebens von Fehlern innerhalb eines Skripts. Alle modernen Browser und die meisten anderen Entwicklungsumgebungen unterstützen Debugging-Werkzeuge - eine spezielle UI in den Entwicklertools, die das Debugging wesentlich erleichtert. Es erlaubt auch, den Code Schritt für Schritt zurückzuverfolgen, um zu sehen, was genau vor sich geht.
 
-Wir werden hier Chrome verwenden, weil es genügend Funktionen hat. Die meisten anderen Browser haben eine ähnliche Herangehensweise.
+Wir werden hier Chrome verwenden, weil es genügend Funktionen hat. Die meisten anderen Browser sind ähnlich aufgebaut.
 
-## The "Sources" panel
+## Das "Sources" Panel
 
-Your Chrome version may look a little bit different, but it still should be obvious what's there.
+Deine Version von Chrome sieht vielleicht ein wenig anders aus, aber es sollte trotzdem zu erkennen sein, was hier gemeint ist.
 
-- Open the [example page](debugging/index.html) in Chrome.
-- Turn on developer tools with `key:F12` (Mac: `key:Cmd+Opt+I`).
-- Select the `Sources` panel.
+- Öffne die [Beispielseite](debugging/index.html) in Chrome.
+- Aktiviere die Entwicklertools mit `key:F12` (Mac: `key:Cmd+Opt+I`).
+- Wähle das `Sources` Panel an.
 
-Here's what you should see if you are doing it for the first time:
+So sollte es aussehen, wenn du es zum ersten Mal öffnest:
 
 ![](chrome-open-sources.svg)
 
-The toggler button <span class="devtools" style="background-position:-172px -98px"></span> opens the tab with files.
+Die Umschaltfläche <span class="devtools" style="background-position:-172px -98px"></span> öffnet das Tab mit den Dateien.
 
-Let's click it and select `hello.js` in the tree view. Here's what should show up:
+Klicken wir es an und wählen `hello.js` in der Baumansicht. Das sollte jetzt angezeigt werden:
 
 ![](chrome-tabs.svg)
 
-The Sources panel has 3 parts:
+Das Source Panel besteht aus drei Teilen:
 
-1. The **File Navigator** pane lists HTML, JavaScript, CSS and other files, including images that are attached to the page. Chrome extensions may appear here too.
-2. The **Code Editor** pane shows the source code.
-3. The **JavaScript Debugging** pane is for debugging, we'll explore it soon.
+1. Der Bereich **Datei-Navigator** listet HTML-, JavaScript-, CSS- und andere Dateien auf, einschließlich der Bilder, die an die Seite angehängt sind. Hier können auch Chrome-Erweiterungen erscheinen.
+2. Der Bereich **Code Editor** zeigt den Quellcode an.
+3. Der Bereich **JavaScript Debugging** dient zum Debuggen, den werden wir bald erforschen.
 
-Now you could click the same toggler <span class="devtools" style="background-position:-172px -122px"></span> again to hide the resources list and give the code some space.
+Nun kannst Du die gleiche Umschaltfläche <span class="devtools" style="background-position:-172px -122px"></span> erneut anklicken, um die Ressourcenliste auszublenden und dem Code etwas mehr Platz zu geben.
 
-## Console
+## Die Konsole
 
 If we press `key:Esc`, then a console opens below. We can type commands there and press `key:Enter` to execute.
 
