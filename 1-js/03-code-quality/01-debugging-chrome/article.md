@@ -84,35 +84,36 @@ function hello(name) {
 }
 ```
 
-That's very convenient when we are in a code editor and don't want to switch to the browser and look up the script in developer tools to set the breakpoint.
+Das ist sehr praktisch, wenn wir uns in einem Code-Editor befinden und nicht zum Browser wechseln und das Skript in Entwicklertools durchsuchen wollen, um einen Haltepunkt zu setzen.
 
 
-## Pause and look around
+## Pausieren und sich umschauen
 
-In our example, `hello()` is called during the page load, so the easiest way to activate the debugger (after we've set the breakpoints) is to reload the page. So let's press `key:F5` (Windows, Linux) or `key:Cmd+R` (Mac).
+In unserem Beispiel wird `hello()` während des Seitenladens aufgerufen, so dass der einfachste Weg, den Debugger zu aktivieren (nachdem wir die Haltepunkte gesetzt haben), das erneute Laden der Seite ist. Drücken wir also `key:F5` (Windows, Linux) oder `key:Cmd+R` (Mac).
 
-As the breakpoint is set, the execution pauses at the 4th line:
+Wenn der Haltepunkt gesetzt wird, pausiert die Ausführung an der 4:
 
 ![](chrome-sources-debugger-pause.svg)
 
-Please open the informational dropdowns to the right (labeled with arrows). They allow you to examine the current code state:
+Bitte öffnen Sie die Informations-Dropdowns auf der rechten Seite (mit Pfeilen gekennzeichnet). Sie ermöglichen es Ihnen, den aktuellen Code-Zustand zu untersuchen:
 
-1. **`Watch` -- shows current values for any expressions.**
+1. **`Uhr` -- zeigt aktuelle Werte für jeden Ausdruck an.**
 
-    You can click the plus `+` and input an expression. The debugger will show its value at any moment, automatically recalculating it in the process of execution.
+    Sie können auf das Plus `+` klicken und einen Ausdruck eingeben. Der Debugger zeigt seinen Wert zu jedem Zeitpunkt an und berechnet ihn während der Ausführung automatisch neu.
 
-2. **`Call Stack` -- shows the nested calls chain.**
+2. **`Call Stack` -- zeigt verschachtelte Aufrufketten.**
 
-    At the current moment the debugger is inside `hello()` call, called by a script in `index.html` (no function there, so it's called "anonymous").
+    Im aktuellen Moment befindet sich der Debugger im `hello()` Aufruf, der von einem Skript in `index.html` aufgerufen wird (dort gibt es keine Funktion, daher wird er "anonym" genannt).
 
-    If you click on a stack item (e.g. "anonymous"), the debugger jumps to the corresponding code, and all its variables can be examined as well.
-3. **`Scope` -- current variables.**
+    Wenn Sie auf ein Stack-Element (z.B. "anonymous") klicken, springt der Debugger zu dem entsprechenden Code, und alle seine Variablen können ebenfalls untersucht werden.
 
-    `Local` shows local function variables. You can also see their values highlighted right over the source.
+3. **`Scope` -- aktuelle Variablen.**
 
-    `Global` has global variables (out of any functions).
+    `Local` zeigt lokale Funktionsvariablen an. Sie können ihre Werte auch direkt über der Quelle hervorgehoben sehen.
 
-    There's also `this` keyword there that we didn't study yet, but we'll do that soon.
+    `Global` hat globale Variablen (aus beliebigen Funktionen).
+
+    Es gibt dort auch `this` Schlüsselwort, das wir uns noch nicht angeschaut haben, aber das werden wir bald tun.
 
 ## Tracing the execution
 
